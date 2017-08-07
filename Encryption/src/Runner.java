@@ -18,9 +18,9 @@ public class Runner {
 			for (int i=0; i<11; i++) {
 				OutputStream outStr = new FileOutputStream("shade"+i+".shadow");
 				File wall = new File("hacked.png");
-
+				//5121 is the Key
 				ShadowCIPHER cipher = new ShadowCIPHER(5121);
-				
+				//Upcoming Shadow Cypher will use TRIPLE DES with a more complex key generation system (won't be static)
 				cipher.mainEncrypt(inStr, outStr);
 				
 				inStr.close();
